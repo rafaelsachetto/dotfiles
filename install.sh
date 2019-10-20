@@ -41,3 +41,5 @@ brew cask install obs
 
 echo "* VLC"
 brew cask install vlc
+
+echo "Well done! 👍🏻"
