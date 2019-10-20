@@ -3,6 +3,9 @@ echo "Symlinking things:"
 ln -s $(pwd)/.gitconfig ~/.gitconfig
 ln -s $(pwd)/.gitignore ~/.gitignore
 
+echo "Disable menu accent when press and hold a key"
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
 # BINARIES
 echo "Installing binaries:"
 
