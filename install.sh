@@ -1,21 +1,11 @@
-echo "Symlinking things:"
-
-ln -s $(pwd)/.gitconfig ~/.gitconfig
-ln -s $(pwd)/.gitignore ~/.gitignore
-
 echo "Disable menu accent when press and hold a key"
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-
-# BINARIES
-echo "Installing binaries:"
 
 echo "Making Zsh the default shell"
 chsh -s $(which zsh)
 
-echo "* Oh My Zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-rm ~/.zshrc
-ln -s $(pwd)/.zshrc ~/.zshrc
+# BINARIES
+echo "Installing binaries"
 
 echo "* Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -41,5 +31,14 @@ brew cask install obs
 
 echo "* VLC"
 brew cask install vlc
+
+echo "* Oh My Zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" && rm ~/.zshrc
+
+echo "Symlinking things"
+ln -s $(pwd)/.gitconfig ~/.gitconfig
+ln -s $(pwd)/.gitignore ~/.gitignore
+ln -s $(pwd)/.zshrc ~/.zshrc
+source ~/.zshrc
 
 echo "Well done! 👍🏻"

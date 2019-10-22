@@ -44,3 +44,4 @@ alias ohmyzsh="vim $HOME/.oh-my-zsh"
 
 # Personal flags
 export GOPATH=~/Working/go
+export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
