@@ -14,7 +14,7 @@ echo "* Git"
 brew install git
 
 echo "* g (Simple go version manager, gluten-free)"
-mkdir -p ~/Working/go
+export GOPATH=$HOME/Working/go
 curl -sSL https://git.io/g-install | sh -s -- zsh
 
 echo "* iTerm 2"
