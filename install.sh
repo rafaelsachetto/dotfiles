@@ -39,6 +39,6 @@ echo "Symlinking things"
 ln -s $(pwd)/.gitconfig ~/.gitconfig
 ln -s $(pwd)/.gitignore ~/.gitignore
 ln -s $(pwd)/.zshrc ~/.zshrc
-source ~/.zshrc
 
 echo "Well done! 👍🏻"
+open /Applications/iTerm.app
