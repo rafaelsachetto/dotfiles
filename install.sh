@@ -32,6 +32,9 @@ brew cask install obs
 echo "* VLC"
 brew cask install vlc
 
+echo "* Adobe Creative Cloud"
+brew cask install adobe-creative-cloud
+
 echo "* Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" && rm ~/.zshrc
 
