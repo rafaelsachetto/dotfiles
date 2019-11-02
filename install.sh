@@ -26,6 +26,9 @@ brew cask install google-chrome
 echo "* Visual Studio Code"
 brew cask install visual-studio-code
 
+echo "* Spotify"
+brew cask install spotify
+
 echo "* OBS"
 brew cask install obs
 
