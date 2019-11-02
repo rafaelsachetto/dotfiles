@@ -1,5 +1,7 @@
-echo "Disable menu accent when press and hold a key"
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+echo "Configure keyboard"
+defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write -g InitialKeyRepeat -int 10
+defaults write -g KeyRepeat -int 1
 
 echo "Making Zsh the default shell"
 chsh -s $(which zsh)
@@ -47,4 +49,6 @@ ln -s $(pwd)/.gitignore ~/.gitignore
 ln -s $(pwd)/.zshrc ~/.zshrc
 
 echo "Well done! 👍🏻"
-open /Applications/iTerm.app
+
+echo "* Log out to activate keyboard config"
+sudo launchctl bootout user/$(id -u $USER)
