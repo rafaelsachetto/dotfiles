@@ -22,6 +22,9 @@ echo "* g (Simple go version manager, gluten-free)"
 export GOPATH=$HOME/Working/go
 curl -sSL https://git.io/g-install | sh -s -- zsh
 
+echo "* Ruby"
+brew install ruby
+
 echo "* iTerm 2"
 brew cask install iterm2
 
