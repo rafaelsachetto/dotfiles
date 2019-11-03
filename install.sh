@@ -3,6 +3,9 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write -g InitialKeyRepeat -int 10
 defaults write -g KeyRepeat -int 1
 
+echo "Configure to show all filename extensions"
+defaults write -g AppleShowAllExtensions -bool true
+
 echo "Making Zsh the default shell"
 chsh -s $(which zsh)
 
