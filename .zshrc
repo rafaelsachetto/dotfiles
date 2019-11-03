@@ -47,4 +47,4 @@ alias g="$HOME/Working/go/bin/g"
 
 # Personal flags
 export GOPATH="$HOME/Working/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
-export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$(gem environment gemdir)/bin/:$PATH"
