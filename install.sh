@@ -56,5 +56,7 @@ ln -s $(pwd)/.zshrc ~/.zshrc
 
 echo "Well done! 👍🏻"
 
+read -n -1 -s -r -p "Press any key to continue"
+
 echo "* Log out to activate keyboard config"
 sudo launchctl bootout user/$(id -u $USER)
