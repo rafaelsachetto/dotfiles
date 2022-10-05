@@ -6,9 +6,6 @@ defaults write -g KeyRepeat -int 1
 echo "Configure to show all filename extensions"
 defaults write -g AppleShowAllExtensions -bool true
 
-echo "Making Zsh the default shell"
-chsh -s $(which zsh)
-
 # BINARIES
 echo "Installing binaries"
 
@@ -18,36 +15,95 @@ echo "* Homebrew"
 echo "* Git"
 brew install git
 
-echo "* g (Simple go version manager, gluten-free)"
-export GOPATH=$HOME/Working/go
-curl -sSL https://git.io/g-install | sh -s -- zsh
+while true; do
+    read -p "Do you wish to install Go? " ys
+    case $ys in
+        [Yy]* ) echo "* g (Simple go version manager, gluten-free)"; export GOPATH=$HOME/Working/go; curl -sSL https://git.io/g-install | sh -s -- zsh;;
+        [Ss]* ) echo "Skipped"; break;;
+        * ) echo "Please answer [Yy]es or [Ss]kip.";;
+    esac
+done
 
-echo "* Ruby"
-brew install ruby
+while true; do
+    read -p "Do you wish to install Ruby? " ys
+    case $ys in
+        [Yy]* ) echo "* Ruby"; brew install ruby;;
+        [Ss]* ) echo "Skipped"; break;;
+        * ) echo "Please answer [Yy]es or [Ss]kip.";;
+    esac
+done
 
-echo "* iTerm 2"
-brew cask install iterm2
+while true; do
+    read -p "Do you wish to install iTerm2? " ys
+    case $ys in
+        [Yy]* ) echo "* iTerm 2"; brew install iterm2 --cask;;
+        [Ss]* ) echo "Skipped"; break;;
+        * ) echo "Please answer [Yy]es or [Ss]kip.";;
+    esac
+done
 
-echo "* Chrome"
-brew cask install google-chrome
+while true; do
+    read -p "Do you wish to install Chrome? " ys
+    case $ys in
+        [Yy]* ) echo "* Chrome"; brew install google-chrome --cask;;
+        [Ss]* ) echo "Skipped"; break;;
+        * ) echo "Please answer [Yy]es or [Ss]kip.";;
+    esac
+done
 
-echo "* Visual Studio Code"
-brew cask install visual-studio-code
+while true; do
+    read -p "Do you wish to install Chrome? " ys
+    case $ys in
+        [Yy]* ) echo "* Chrome"; brew install google-chrome --cask;;
+        [Ss]* ) echo "Skipped"; break;;
+        * ) echo "Please answer [Yy]es or [Ss]kip.";;
+    esac
+done
 
-echo "* Spotify"
-brew cask install spotify
+while true; do
+    read -p "Do you wish to install Visual Studio Code? " ys
+    case $ys in
+        [Yy]* ) echo "* Visual Studio Code"; brew install visual-studio-code --cask;;
+        [Ss]* ) echo "Skipped"; break;;
+        * ) echo "Please answer [Yy]es or [Ss]kip.";;
+    esac
+done
 
-echo "* OBS"
-brew cask install obs
+while true; do
+    read -p "Do you wish to install Spotify? " ys
+    case $ys in
+        [Yy]* ) echo "* Spotify"; brew install spotify --cask;;
+        [Ss]* ) echo "Skipped"; break;;
+        * ) echo "Please answer [Yy]es or [Ss]kip.";;
+    esac
+done
 
-echo "* VLC"
-brew cask install vlc
+while true; do
+    read -p "Do you wish to install OBS? " ys
+    case $ys in
+        [Yy]* ) echo "* OBS"; brew install obs --cask;;
+        [Ss]* ) echo "Skipped"; break;;
+        * ) echo "Please answer [Yy]es or [Ss]kip.";;
+    esac
+done
 
-echo "* Adobe Creative Cloud"
-brew cask install adobe-creative-cloud
+while true; do
+    read -p "Do you wish to install VLC? " ys
+    case $ys in
+        [Yy]* ) echo "* VLC"; brew install vlc --cask;;
+        [Ss]* ) echo "Skipped"; break;;
+        * ) echo "Please answer [Yy]es or [Ss]kip.";;
+    esac
+done
 
-echo "* Figma"
-brew cask install figma
+while true; do
+    read -p "Do you wish to install Figma? " ys
+    case $ys in
+        [Yy]* ) echo "* Figma"; brew install figma --cask;;
+        [Ss]* ) echo "Skipped"; break;;
+        * ) echo "Please answer [Yy]es or [Ss]kip.";;
+    esac
+done
 
 echo "* Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" && rm ~/.zshrc
@@ -55,6 +111,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo "Symlinking things"
 ln -s $(pwd)/.gitconfig ~/.gitconfig
 ln -s $(pwd)/.gitignore ~/.gitignore
+mv ~/.zshrc ~/.zshrc_
 ln -s $(pwd)/.zshrc ~/.zshrc
 
 echo "Well done! 👍🏻"
