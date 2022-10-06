@@ -18,7 +18,7 @@ brew install git
 while true; do
     read -p "Do you wish to install Go? " ys
     case $ys in
-        [Yy]* ) echo "* g (Simple go version manager, gluten-free)"; export GOPATH=$HOME/Working/go; curl -sSL https://git.io/g-install | sh -s -- zsh;;
+        [Yy]* ) echo "* g (Simple go version manager, gluten-free)"; export GOPATH=$HOME/Working/go; curl -sSL https://git.io/g-install | sh -s -- zsh; break;;
         [Ss]* ) echo "Skipped"; break;;
         * ) echo "Please answer [Yy]es or [Ss]kip.";;
     esac
@@ -27,7 +27,7 @@ done
 while true; do
     read -p "Do you wish to install Ruby? " ys
     case $ys in
-        [Yy]* ) echo "* Ruby"; brew install ruby;;
+        [Yy]* ) echo "* Ruby"; brew install ruby; break;;
         [Ss]* ) echo "Skipped"; break;;
         * ) echo "Please answer [Yy]es or [Ss]kip.";;
     esac
@@ -36,7 +36,7 @@ done
 while true; do
     read -p "Do you wish to install iTerm2? " ys
     case $ys in
-        [Yy]* ) echo "* iTerm 2"; brew install iterm2 --cask;;
+        [Yy]* ) echo "* iTerm 2"; brew install iterm2 --cask; break;;
         [Ss]* ) echo "Skipped"; break;;
         * ) echo "Please answer [Yy]es or [Ss]kip.";;
     esac
@@ -45,7 +45,7 @@ done
 while true; do
     read -p "Do you wish to install Chrome? " ys
     case $ys in
-        [Yy]* ) echo "* Chrome"; brew install google-chrome --cask;;
+        [Yy]* ) echo "* Chrome"; brew install google-chrome --cask; break;;
         [Ss]* ) echo "Skipped"; break;;
         * ) echo "Please answer [Yy]es or [Ss]kip.";;
     esac
@@ -54,7 +54,7 @@ done
 while true; do
     read -p "Do you wish to install Chrome? " ys
     case $ys in
-        [Yy]* ) echo "* Chrome"; brew install google-chrome --cask;;
+        [Yy]* ) echo "* Chrome"; brew install google-chrome --cask; break;;
         [Ss]* ) echo "Skipped"; break;;
         * ) echo "Please answer [Yy]es or [Ss]kip.";;
     esac
@@ -63,7 +63,7 @@ done
 while true; do
     read -p "Do you wish to install Visual Studio Code? " ys
     case $ys in
-        [Yy]* ) echo "* Visual Studio Code"; brew install visual-studio-code --cask;;
+        [Yy]* ) echo "* Visual Studio Code"; brew install visual-studio-code --cask; break;;
         [Ss]* ) echo "Skipped"; break;;
         * ) echo "Please answer [Yy]es or [Ss]kip.";;
     esac
@@ -72,7 +72,7 @@ done
 while true; do
     read -p "Do you wish to install Spotify? " ys
     case $ys in
-        [Yy]* ) echo "* Spotify"; brew install spotify --cask;;
+        [Yy]* ) echo "* Spotify"; brew install spotify --cask; break;;
         [Ss]* ) echo "Skipped"; break;;
         * ) echo "Please answer [Yy]es or [Ss]kip.";;
     esac
@@ -81,7 +81,7 @@ done
 while true; do
     read -p "Do you wish to install WhatsApp? " ys
     case $ys in
-        [Yy]* ) echo "* WhatsApp"; brew install whatsapp --cask;;
+        [Yy]* ) echo "* WhatsApp"; brew install whatsapp --cask; break;;
         [Ss]* ) echo "Skipped"; break;;
         * ) echo "Please answer [Yy]es or [Ss]kip.";;
     esac
@@ -90,7 +90,16 @@ done
 while true; do
     read -p "Do you wish to install Authy? " ys
     case $ys in
-        [Yy]* ) echo "* Authy"; brew install authy --cask;;
+        [Yy]* ) echo "* Authy"; brew install authy --cask; break;;
+        [Ss]* ) echo "Skipped"; break;;
+        * ) echo "Please answer [Yy]es or [Ss]kip.";;
+    esac
+done
+
+while true; do
+    read -p "Do you wish to install Adobe Creative Cloud? " ys
+    case $ys in
+        [Yy]* ) echo "* Adobe Creative Cloud"; brew install adobe-creative-cloud --cask; break;;
         [Ss]* ) echo "Skipped"; break;;
         * ) echo "Please answer [Yy]es or [Ss]kip.";;
     esac
@@ -99,7 +108,7 @@ done
 while true; do
     read -p "Do you wish to install OBS? " ys
     case $ys in
-        [Yy]* ) echo "* OBS"; brew install obs --cask;;
+        [Yy]* ) echo "* OBS"; brew install obs --cask; break;;
         [Ss]* ) echo "Skipped"; break;;
         * ) echo "Please answer [Yy]es or [Ss]kip.";;
     esac
@@ -108,7 +117,7 @@ done
 while true; do
     read -p "Do you wish to install VLC? " ys
     case $ys in
-        [Yy]* ) echo "* VLC"; brew install vlc --cask;;
+        [Yy]* ) echo "* VLC"; brew install vlc --cask; break;;
         [Ss]* ) echo "Skipped"; break;;
         * ) echo "Please answer [Yy]es or [Ss]kip.";;
     esac
@@ -117,7 +126,7 @@ done
 while true; do
     read -p "Do you wish to install Figma? " ys
     case $ys in
-        [Yy]* ) echo "* Figma"; brew install figma --cask;;
+        [Yy]* ) echo "* Figma"; brew install figma --cask; break;;
         [Ss]* ) echo "Skipped"; break;;
         * ) echo "Please answer [Yy]es or [Ss]kip.";;
     esac
