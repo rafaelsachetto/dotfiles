@@ -1,7 +1,7 @@
 echo "Configure keyboard"
 defaults write -g ApplePressAndHoldEnabled -bool false
-defaults write -g InitialKeyRepeat -int 10
-defaults write -g KeyRepeat -int 1
+defaults write -g InitialKeyRepeat -int 11
+defaults write -g KeyRepeat -int 2
 
 echo "Configure to show all filename extensions"
 defaults write -g AppleShowAllExtensions -bool true
@@ -73,6 +73,24 @@ while true; do
     read -p "Do you wish to install Spotify? " ys
     case $ys in
         [Yy]* ) echo "* Spotify"; brew install spotify --cask;;
+        [Ss]* ) echo "Skipped"; break;;
+        * ) echo "Please answer [Yy]es or [Ss]kip.";;
+    esac
+done
+
+while true; do
+    read -p "Do you wish to install WhatsApp? " ys
+    case $ys in
+        [Yy]* ) echo "* WhatsApp"; brew install whatsapp --cask;;
+        [Ss]* ) echo "Skipped"; break;;
+        * ) echo "Please answer [Yy]es or [Ss]kip.";;
+    esac
+done
+
+while true; do
+    read -p "Do you wish to install Authy? " ys
+    case $ys in
+        [Yy]* ) echo "* Authy"; brew install authy --cask;;
         [Ss]* ) echo "Skipped"; break;;
         * ) echo "Please answer [Yy]es or [Ss]kip.";;
     esac
