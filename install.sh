@@ -61,15 +61,6 @@ while true; do
 done
 
 while true; do
-    read -p "Do you wish to install Chrome? " ys
-    case $ys in
-        [Yy]* ) echo "* Chrome"; brew install google-chrome --cask; break;;
-        [Ss]* ) echo "Skipped"; break;;
-        * ) echo "Please answer [Yy]es or [Ss]kip.";;
-    esac
-done
-
-while true; do
     read -p "Do you wish to install Visual Studio Code? " ys
     case $ys in
         [Yy]* ) echo "* Visual Studio Code"; brew install visual-studio-code --cask; break;;
