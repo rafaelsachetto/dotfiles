@@ -16,6 +16,15 @@ echo "* Git"
 brew install git
 
 while true; do
+    read -p "Do you wish to install Little Snitch? " ys
+    case $ys in
+        [Yy]* ) echo "* Little Snitch"; brew install little-snitch --cask; break;;
+        [Ss]* ) echo "Skipped"; break;;
+        * ) echo "Please answer [Yy]es or [Ss]kip.";;
+    esac
+done
+
+while true; do
     read -p "Do you wish to install Go? " ys
     case $ys in
         [Yy]* ) echo "* g (Simple go version manager, gluten-free)"; export GOPATH=$HOME/Working/go; curl -sSL https://git.io/g-install | sh -s -- zsh; break;;
@@ -27,7 +36,7 @@ done
 while true; do
     read -p "Do you wish to install Ruby? " ys
     case $ys in
-        [Yy]* ) echo "* Ruby"; brew install ruby; break;;
+        [Yy]* ) echo "* Ruby"; brew install rbenv ruby-build; break;;
         [Ss]* ) echo "Skipped"; break;;
         * ) echo "Please answer [Yy]es or [Ss]kip.";;
     esac
