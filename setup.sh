@@ -1,9 +1,9 @@
 #!/bin/bash
 
 cmds=(
-  "/bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+  "/bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"; eval \"\$(/opt/homebrew/bin/brew shellenv)\""
   "export GOPATH=$HOME/Working/go; curl -sSL https://git.io/g-install | sh -s"
-  "sh -c \"\$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"; rm ~/.zshrc; ln -s $(pwd)/.zshrc ~/.zshrc"
+  "sh -c \"\$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"; rm ~/.zshrc ~/.zprofile; ln -s $(pwd)/.zprofile ~/.zprofile; ln -s $(pwd)/.zshrc ~/.zshrc"
 )
 
 configs=(
@@ -14,7 +14,7 @@ configs=(
 )
 
 base=(
-  "firacode-nerd-font --cask"
+  "font-fira-code-nerd-font --cask"
   "git; ln -s $(pwd)/.gitconfig ~/.gitconfig; ln -s $(pwd)/.gitignore ~/.gitignore"
   docker
 )
@@ -35,17 +35,17 @@ app=(
 )
 
 code=(
-  "nvim; ln -s $(pwd)/.config/nvim ~/.config/nvim"
-  "alacritty; ln -s $(pwd)/.config/alacritty ~/.config/alacritty"
+  "nvim; mkdir ~/.config; ln -s $(pwd)/.config/nvim ~/.config/nvim"
+  "alacritty; mkdir ~/.config; ln -s $(pwd)/.config/alacritty ~/.config/alacritty"
   lua
   lua-language-server
   typescript
-  typecript-language-server
+  typescript-language-server
   nvm
 )
 
 for config in ${configs[@]}; do
-  default write -g $config
+  eval "defaults write -g ${config}"
 done
 
 echo "Executing some cmd for user: ${USER}"
