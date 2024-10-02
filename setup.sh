@@ -29,11 +29,19 @@ app=(
   "notion --cask"
   "notion-calendar --cask"
   "vlc --cask"
+  "cloudflare-warp --cask"
+  "nordvpn --cask"
+  "docker --cask"
 )
 
 code=(
   "nvim; ln -s $(pwd)/.config/nvim ~/.config/nvim"
   "alacritty; ln -s $(pwd)/.config/alacritty ~/.config/alacritty"
+  lua
+  lua-language-server
+  typescript
+  typecript-language-server
+  nvm
 )
 
 for config in ${configs[@]}; do
