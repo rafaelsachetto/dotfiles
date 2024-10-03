@@ -2,7 +2,7 @@
 
 cmds=(
   "/bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"; eval \"\$(/opt/homebrew/bin/brew shellenv)\""
-  "export GOPATH=$HOME/Working/go; curl -sSL https://git.io/g-install | sh -s"
+  "curl -sSL https://git.io/g-install | sh -s"
   "sh -c \"\$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"; rm ~/.zshrc ~/.zprofile; ln -s $(pwd)/.zprofile ~/.zprofile; ln -s $(pwd)/.zshrc ~/.zshrc"
 )
 
@@ -15,7 +15,7 @@ configs=(
 
 base=(
   "font-fira-code-nerd-font --cask"
-  "git; ln -s $(pwd)/.gitconfig ~/.gitconfig; ln -s $(pwd)/.gitignore ~/.gitignore"
+  "git; rm ~/.gitconfig ~/.gitignore; ln -s $(pwd)/.gitconfig ~/.gitconfig; ln -s $(pwd)/.gitignore ~/.gitignore"
   "docker --cask"
   "alacritty; mkdir ~/.config; ln -s $(pwd)/.config/alacritty ~/.config/alacritty"
 )
