@@ -21,7 +21,7 @@ base=(
   "font-fira-code-nerd-font --cask"
   "git; rm ~/.gitconfig ~/.gitignore; ln -s $(pwd)/.gitconfig ~/.gitconfig; ln -s $(pwd)/.gitignore ~/.gitignore"
   "docker --cask"
-  "alacritty; rm -rf ~/.config/alacritty; mkdir ~/.config; ln -s $(pwd)/.config/alacritty ~/.config/alacritty"
+  "alacritty; mkdir ~/.config; rm -rf ~/.config/alacritty; ln -s $(pwd)/.config/alacritty ~/.config/alacritty"
 )
 
 app=(
@@ -39,8 +39,9 @@ app=(
 )
 
 code=(
-  "nvim; rm -rf ~/.config/nvim; mkdir ~/.config; ln -s $(pwd)/.config/nvim ~/.config/nvim"
+  "nvim; mkdir ~/.config; rm -rf ~/.config/nvim; ln -s $(pwd)/.config/nvim ~/.config/nvim"
   nvm
+  "supabase/tap/supabase"
 )
 
 for config in ${configs[@]}; do
