@@ -16,7 +16,8 @@ configs=(
 base=(
   "font-fira-code-nerd-font --cask"
   "git; ln -s $(pwd)/.gitconfig ~/.gitconfig; ln -s $(pwd)/.gitignore ~/.gitignore"
-  docker
+  "docker --cask"
+  "alacritty; mkdir ~/.config; ln -s $(pwd)/.config/alacritty ~/.config/alacritty"
 )
 
 app=(
@@ -31,16 +32,10 @@ app=(
   "vlc --cask"
   "cloudflare-warp --cask"
   "nordvpn --cask"
-  "docker --cask"
 )
 
 code=(
   "nvim; mkdir ~/.config; ln -s $(pwd)/.config/nvim ~/.config/nvim"
-  "alacritty; mkdir ~/.config; ln -s $(pwd)/.config/alacritty ~/.config/alacritty"
-  lua
-  lua-language-server
-  typescript
-  typescript-language-server
   nvm
 )
 
