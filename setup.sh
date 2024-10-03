@@ -11,13 +11,17 @@ configs=(
   "InitialKeyRepeat -int 12"
   "KeyRepeat -int 2"
   "AppleShowAllExtensions -bool true"
+  "NSTableViewDefaultSizeMode -int 1"
+  "AppleShowAllFiles -bool true"
+  "show-recents -bool false"
+  "static-only -bool true"
 )
 
 base=(
   "font-fira-code-nerd-font --cask"
   "git; rm ~/.gitconfig ~/.gitignore; ln -s $(pwd)/.gitconfig ~/.gitconfig; ln -s $(pwd)/.gitignore ~/.gitignore"
   "docker --cask"
-  "alacritty; mkdir ~/.config; ln -s $(pwd)/.config/alacritty ~/.config/alacritty"
+  "alacritty; rm -rf ~/.config/alacritty; mkdir ~/.config; ln -s $(pwd)/.config/alacritty ~/.config/alacritty"
 )
 
 app=(
@@ -35,13 +39,15 @@ app=(
 )
 
 code=(
-  "nvim; mkdir ~/.config; ln -s $(pwd)/.config/nvim ~/.config/nvim"
+  "nvim; rm -rf ~/.config/nvim; mkdir ~/.config; ln -s $(pwd)/.config/nvim ~/.config/nvim"
   nvm
 )
 
 for config in ${configs[@]}; do
   eval "defaults write -g ${config}"
 done
+sudo killall Finder
+sudo killall Docker
 
 echo "Executing some cmd for user: ${USER}"
 echo
