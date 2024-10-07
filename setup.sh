@@ -20,6 +20,7 @@ configs=(
 base=(
   "font-fira-code-nerd-font --cask"
   "font-sf-pro --cask"
+  "font-sf-compact --cask"
   "font-new-york --cask"
   "git; rm ~/.gitconfig ~/.gitignore; ln -s $(pwd)/.gitconfig ~/.gitconfig; ln -s $(pwd)/.gitignore ~/.gitignore"
   "docker --cask"
