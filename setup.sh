@@ -18,6 +18,7 @@ configs=(
 )
 
 base=(
+  "nikitabobko/tap/aerospace --cask; defaults write -g NSWindowShouldDragOnGesture -bool true; mkdir ~/.config; rm -rf ~/.config/aerospace; ln -s $(pwd)/.config/aerospace ~/.config/aerospace"
   "font-fira-code-nerd-font --cask"
   "font-sf-pro --cask"
   "font-sf-compact --cask"
