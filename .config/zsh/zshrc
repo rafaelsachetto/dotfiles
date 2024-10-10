@@ -44,5 +44,8 @@ export CPPFLAGS="-I/usr/local/opt/ruby/include"
 alias zshconfig="nvim $HOME/.zshrc"
 alias ohmyzsh="nvim $HOME/.oh-my-zsh"
 
+if [ "$TERM_PROGRAM" != "Alacritty" ]; then
+  eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/config.json)"
+fi
 
 export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g

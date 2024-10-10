@@ -3,7 +3,7 @@
 cmds=(
   "/bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"; eval \"\$(/opt/homebrew/bin/brew shellenv)\""
   "curl -sSL https://git.io/g-install | sh -s"
-  "sh -c \"\$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"; rm ~/.zshrc ~/.zprofile; ln -s $(pwd)/.zprofile ~/.zprofile; ln -s $(pwd)/.zshrc ~/.zshrc"
+  "sh -c \"\$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"; rm ~/.zshrc ~/.zprofile; ln -s $(pwd)/.config/zprofile ~/.zprofile; ln -s $(pwd)/.config/zshrc ~/.zshrc"
 )
 
 configs=(
@@ -24,7 +24,7 @@ base=(
   "font-sf-compact --cask"
   "font-sf-mono --cask"
   "font-new-york --cask"
-  "git; rm ~/.gitconfig ~/.gitignore; ln -s $(pwd)/.gitconfig ~/.gitconfig; ln -s $(pwd)/.gitignore ~/.gitignore"
+  "git; rm ~/.gitconfig ~/.gitignore; ln -s $(pwd)/.config/gitconfig ~/.gitconfig; ln -s $(pwd)/.config/gitignore ~/.gitignore"
   "docker --cask"
   "alacritty; mkdir ~/.config; rm -rf ~/.config/alacritty; ln -s $(pwd)/.config/alacritty ~/.config/alacritty"
 )
