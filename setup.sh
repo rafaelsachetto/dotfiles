@@ -27,6 +27,7 @@ base=(
   "git; rm ~/.gitconfig ~/.gitignore; ln -s $(pwd)/.config/gitconfig ~/.gitconfig; ln -s $(pwd)/.config/gitignore ~/.gitignore"
   "docker --cask"
   "alacritty; mkdir ~/.config; rm -rf ~/.config/alacritty; ln -s $(pwd)/.config/alacritty ~/.config/alacritty"
+  "jandedobbeleer/oh-my-posh/oh-my-posh; mkdir ~/.config; rm -rf ~/.config/oh-my-posh; ln -s $(pwd)/.config/oh-my-posh ~/.config/oh-my-posh"
 )
 
 app=(
