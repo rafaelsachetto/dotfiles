@@ -35,6 +35,24 @@
           "type": "project"
         },
         {
+          "type": "swift",
+          "style": "plain",
+          "template": "\ue755 {{ .Full }} ",
+          "foreground": "#f6553c"
+        },
+        {
+          "type": "react",
+          "style": "plain",
+          "template": "\ue7ba {{ .Full }} ",
+          "foreground": "#81a1c1"
+        },
+        {
+          "type": "go",
+          "style": "plain",
+          "template": "\ue626 {{ .Full }} ",
+          "foreground": "#7FD5EA"
+        },
+        {
           "foreground": "#44FFD2",
           "properties": {
             "fetch_version": true
@@ -42,6 +60,12 @@
           "style": "plain",
           "template": "\ue718 {{ .Full }} ",
           "type": "node"
+        },
+        {
+          "type": "lua",
+          "style": "plain",
+          "template": "\ue620 {{ .Full }} ",
+          "foreground": "blue"
         },
         {
           "foreground": "#FE4A49",
