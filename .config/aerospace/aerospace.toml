@@ -167,3 +167,7 @@ alt-j = ['join-with down', 'mode main']
 alt-k = ['join-with up', 'mode main']
 alt-l = ['join-with right', 'mode main']
 
+[workspace-to-monitor-force-assignment]
+1 = 'main'
+2 = 'secondary'
+
