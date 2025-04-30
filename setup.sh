@@ -15,6 +15,8 @@ configs=(
   "AppleShowAllFiles -bool true"
   "show-recents -bool false"
   "static-only -bool true"
+  "com.apple.spaces spans-displays -bool true"
+  "com.apple.dock expose-group-apps -bool true"
 )
 
 base=(
@@ -24,6 +26,7 @@ base=(
   "font-sf-compact --cask"
   "font-sf-mono --cask"
   "font-new-york --cask"
+  "font-inter --cask"
   "git; rm ~/.gitconfig ~/.gitignore; ln -s $(pwd)/.config/gitconfig ~/.gitconfig; ln -s $(pwd)/.config/gitignore ~/.gitignore"
   "docker --cask"
   "alacritty; mkdir ~/.config; rm -rf ~/.config/alacritty; ln -s $(pwd)/.config/alacritty ~/.config/alacritty"

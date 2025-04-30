@@ -2,97 +2,118 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#15C2CB",
           "properties": {
+            "cache_duration": "none",
             "style": "folder"
           },
-          "style": "plain",
           "template": "{{ .Path }} ",
-          "type": "path"
+          "foreground": "#15C2CB",
+          "type": "path",
+          "style": "plain"
         },
         {
-          "foreground": "#F141A8",
           "properties": {
-            "branch_icon": "\ue0a0 "
+            "branch_icon": "\ue0a0 ",
+            "cache_duration": "none"
           },
-          "style": "plain",
           "template": "<#F3EFF5>on</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
-          "type": "git"
+          "foreground": "#F141A8",
+          "type": "git",
+          "style": "plain"
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "right",
       "segments": [
         {
-          "foreground": "#5EADF2",
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "{{if .Version}}\uf487 {{.Version}} {{end}}",
-          "type": "project"
+          "foreground": "#5EADF2",
+          "type": "project",
+          "style": "plain"
         },
         {
-          "type": "swift",
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "\ue755 {{ .Full }} ",
-          "foreground": "#f6553c"
+          "foreground": "#f6553c",
+          "type": "swift",
+          "style": "plain"
         },
         {
-          "type": "react",
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "\ue7ba {{ .Full }} ",
-          "foreground": "#81a1c1"
+          "foreground": "#81a1c1",
+          "type": "react",
+          "style": "plain"
         },
         {
-          "type": "go",
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "\ue626 {{ .Full }} ",
-          "foreground": "#7FD5EA"
+          "foreground": "#7FD5EA",
+          "type": "go",
+          "style": "plain"
         },
         {
-          "foreground": "#44FFD2",
           "properties": {
+            "cache_duration": "none",
             "fetch_version": true
           },
-          "style": "plain",
           "template": "\ue718 {{ .Full }} ",
-          "type": "node"
+          "foreground": "#44FFD2",
+          "type": "node",
+          "style": "plain"
         },
         {
-          "type": "lua",
-          "style": "plain",
-          "template": "\ue620 {{ .Full }} ",
-          "foreground": "blue"
-        },
-        {
-          "foreground": "#FE4A49",
           "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\ue620 {{ .Full }} ",
+          "foreground": "blue",
+          "type": "lua",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
             "fetch_version": true
           },
-          "style": "plain",
-          "template": "\uDB80\uDEC1 {{.Full}} ",
-          "type": "pnpm"
+          "template": "\udb80\udec1 {{.Full}} ",
+          "foreground": "#FE4A49",
+          "type": "pnpm",
+          "style": "plain"
         }
-
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "❯ ",
           "foreground": "#FFE45E",
-          "style": "plain",
-          "template": "\u276f ",
-          "type": "text"
+          "type": "text",
+          "style": "plain"
         }
       ],
-      "type": "prompt"
+      "newline": true
     }
   ],
-  "version": 2
+  "version": 3
 }
