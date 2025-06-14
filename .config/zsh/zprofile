@@ -21,7 +21,7 @@ export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$P
 alias gvm="$GOPATH/bin/g"
 alias vim="nvim"
 alias vi="nvim"
-alias bup="brew update && brew upgrade && brew cleanup"
+alias brup="bu && bup && ba && bcn"
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zprofile.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zprofile.post.zsh"

@@ -31,7 +31,7 @@ ENABLE_CORRECTION="true"
 
 HIST_STAMPS="dd/mm/yyyy"
 
-plugins=(git golang)
+plugins=(brew git golang)
 
 source $ZSH/oh-my-zsh.sh
 
